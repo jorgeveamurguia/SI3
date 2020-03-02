@@ -1,0 +1,115 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.custom.i18n.resources" value="messages" />
+	<constant name="struts.action.extension" value="html" />
+	<constant name="struts.codebehind.pathPrefix" value="/WEB-INF/pages/" />
+
+	<!-- Configuration for the login default package. -->
+	<package name="default" extends="struts-default">
+		<interceptors>
+			<interceptor name="authenticationInterceptor"
+				class="es.uned.si3.web.interceptors.AuthenticationInterceptor" />
+			<interceptor name="rolesInterceptor"
+				class="es.uned.si3.web.interceptors.RolesInterceptor" />
+
+			<interceptor-stack name="defaultSecurityStackWithAuthentication">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="authenticationInterceptor">
+					<param name="excludeActions">
+						UserAction.newUser, UserAction.resetAB,
+						UserAction.login, UserAction.createSql,
+						UserAction.resetDB
+				</param>
+				</interceptor-ref>
+
+				<interceptor-ref name="rolesInterceptor">
+					<param name="roleActions">
+						*:
+						UserAction.newUser, UserAction.resetDB,
+						UserAction.login,UserAction.editUserDetails,
+						UserAction.logout,UserAction.createSql,
+						DownloadFile,PFC.verDetalles,Mensajes.ver;
+						Admin:
+						SolicitudesPFC.ver,SolicitudesPFC.revisar,
+						SolicitudesPFC.aceptar,SolicitudesPFC.rechazar,
+						PFC.ver,PropuestaPFC.ver;
+						Profesor:
+						PropuestaPFC.ver,PropuestaPFC.crear,PFC.ver,PFC.cerrar;
+						Alumno:PropuestaPFC.ver,PropuestaPFC.solicitar;
+			</param>
+				</interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+
+		<default-interceptor-ref name="defaultSecurityStackWithAuthentication" />
+
+
+		<action name="" class="es.uned.si3.web.action.UserActionsController"
+			method="goHome">
+			<result name="start">/index.jsp</result>
+		</action>
+		<action name="UserAction.*" class="es.uned.si3.web.action.UserActionsController"
+			method="{1}">
+			<result name="PENDING">/doSql</result>
+			<result name="input">/index.jsp</result>
+			<result name="start">/index.jsp</result>
+			<result name="newUser">/public/newUser.jsp</result>
+			<result name="editUserDetails">/private/editUserDetails.jsp</result>
+			<result name="error">/index.jsp</result>
+		</action>
+
+		<action name="PropuestaPFC.*" class="es.uned.si3.web.action.PropuestaPFCController"
+			method="{1}">
+			<interceptor-ref name="defaultSecurityStackWithAuthentication"/>
+			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">536870912</param> <!-- 512 MB -->
+				<param name="allowedTypes">application/pdf</param>
+			</interceptor-ref>
+
+			<result name="input">/index.jsp</result>
+			<result name="crear">/private/editPropuestaPFC.jsp</result>
+			<result name="listaPropuestas">/private/propuestasPFC.jsp</result>
+			<result name="solicitar">/private/solicitarPFC.jsp</result>
+			<result name="start">/index.jsp</result>
+			<result name="error">/index.jsp</result>
+		</action>
+		<action name="SolicitudesPFC.*" class="es.uned.si3.web.action.SolicitudesPFCController"
+			method="{1}">
+			<result name="verSolicitudes">/private/verSolicitudesPFC.jsp</result>
+			<result name="revisarSolicitudes">/private/revisarSolicitudesPFC.jsp</result>
+			<result name="start">/index.jsp</result>
+			<result name="error">/index.jsp</result>
+		</action>
+
+		<action name="PFC.*" class="es.uned.si3.web.action.PFCController"
+			method="{1}">
+			<interceptor-ref name="defaultSecurityStackWithAuthentication"/>
+			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">536870912</param> <!-- 512 MB -->
+				<param name="allowedTypes">application/pdf,application/octet-stream</param>
+			</interceptor-ref>
+			
+			<result name="verPFC">/private/verPFC.jsp</result>
+			<result name="verPFCDetalles">/private/verPFCDetalles.jsp</result>
+			<result name="start">/index.jsp</result>
+			<result name="error">/index.jsp</result>
+		</action>
+		<action name="Mensajes.*" class="es.uned.si3.web.action.MensajesController"
+			method="{1}">
+			<result name="verMensajes">/private/verMensajes.jsp</result>
+			<result name="start">/index.jsp</result>
+			<result name="error">/index.jsp</result>
+		</action>
+		<action name="DownloadFile~*~*" class="es.uned.si3.web.action.DownloadFileController">
+			<result type="stream" name="success">
+				<param name="contentType">application/{1}</param>
+				<param name="inputName">inputStream</param>
+				<param name="contentDisposition">attachment; filename="{2}"</param>
+			</result>
+			<result name="error">/index.jsp</result>
+		</action>
+	</package>
+</struts>

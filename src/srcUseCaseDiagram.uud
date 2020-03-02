@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:UseCaseDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="srcUseCaseDiagram" id="{UMLID=_mPHicJhmEeCKx6Cvzo4niw,JavaID=}" metadata="uml2-1.0" initialized="true" tag="10" key="3230303730363239207369335F3732">
+  <children xsi:type="editmodel:UseCaseActorEditModel" name="Alumno" backgroundRGB="253,253,253" location="67,35" size="70,100" id="{UMLID=_sT5h0JiGEeCKx6Cvzo4niw}" itemName="Alumno">
+    <sourceConnections xsi:type="editmodel:UseCaseAssociationEditModel" size="2,1" stereotype="" autoLocated="true" id="{UMLID=_QK-S0JiHEeCKx6Cvzo4niw}" source="//@children.0" target="//@children.10" targetEnd="//@children.0/@sourceConnections.0/@children.1" label="//@children.0/@sourceConnections.0/@children.2" sourceEnd="//@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:UseCaseEndEditModel" name="Alumno" location="70,25" id="{UMLID=_QXTeoJiHEeCKx6Cvzo4niw}" attachSource="true" roleLabel="//@children.0/@sourceConnections.0/@children.0/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="+ Alumno" foregroundRGB="96,96,96" location="144,78" size="45,13" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:UseCaseEndEditModel" name="Ver Propuesta" location="0,25" id="{UMLID=_QXUswJiHEeCKx6Cvzo4niw}" roleLabel="//@children.0/@sourceConnections.0/@children.1/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="+ Ver Propuesta" foregroundRGB="96,96,96" location="237,40" size="78,13" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:WireLabelEditModel" foregroundRGB="96,96,96" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:UseCaseAssociationEditModel" size="2,1" stereotype="" autoLocated="true" id="{UMLID=_jp9bEJiHEeCKx6Cvzo4niw}" source="//@children.0" target="//@children.13" targetEnd="//@children.0/@sourceConnections.1/@children.1" label="//@children.0/@sourceConnections.1/@children.2" sourceEnd="//@children.0/@sourceConnections.1/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:UseCaseEndEditModel" name="Alumno" location="70,81" id="{UMLID=_j2BhIJiHEeCKx6Cvzo4niw}" attachSource="true" roleLabel="//@children.0/@sourceConnections.1/@children.0/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="+ Alumno" foregroundRGB="96,96,96" location="62,140" size="45,13" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:UseCaseEndEditModel" name="Solicitar PFC" location="0,18" id="{UMLID=_j2DWUJiHEeCKx6Cvzo4niw}" roleLabel="//@children.0/@sourceConnections.1/@children.1/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="+ Solicitar PFC" foregroundRGB="96,96,96" location="146,101" size="71,13" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:WireLabelEditModel" foregroundRGB="96,96,96" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:UseCaseAssociationEditModel" size="2,1" stereotype="" autoLocated="true" id="{UMLID=_DOHlYJiIEeCKx6Cvzo4niw}" source="//@children.0" target="//@children.16" targetEnd="//@children.0/@sourceConnections.2/@children.1" label="//@children.0/@sourceConnections.2/@children.2" sourceEnd="//@children.0/@sourceConnections.2/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:UseCaseEndEditModel" name="Alumno" location="70,59" id="{UMLID=_DY55EJiIEeCKx6Cvzo4niw}" attachSource="true" roleLabel="//@children.0/@sourceConnections.2/@children.0/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="+ Alumno" foregroundRGB="96,96,96" location="62,140" size="45,13" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:UseCaseEndEditModel" name="Ver Mensajes" location="0,6" id="{UMLID=_DY7uQJiIEeCKx6Cvzo4niw}" roleLabel="//@children.0/@sourceConnections.2/@children.1/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="+ Ver Mensajes" foregroundRGB="96,96,96" location="294,175" size="74,13" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:WireLabelEditModel" foregroundRGB="96,96,96" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+  </children>
+  <children xsi:type="editmodel:LabelObjectEditModel" location="102,135" size="0,15" fontInfo="Omondo_Font_Default-9-0" description="Stereotype" attachment="//@children.0"/>
+  <children xsi:type="editmodel:LabelObjectEditModel" name="Alumno" location="79,135" size="46,15" fontInfo="Omondo_Font_Default-9-0" description="Name" attachment="//@children.0"/>
+  <children xsi:type="editmodel:UseCaseActorEditModel" targetConnections="//@children.9/@sourceConnections.0" name="Profesor" backgroundRGB="253,253,253" location="795,56" size="70,100" id="{UMLID=_uT4ckJiGEeCKx6Cvzo4niw}" itemName="Profesor">
+    <sourceConnections xsi:type="editmodel:UseCaseAssociationEditModel" size="2,1" stereotype="" autoLocated="true" id="{UMLID=_s5jXIJiHEeCKx6Cvzo4niw}" source="//@children.3" target="//@children.10" targetEnd="//@children.3/@sourceConnections.0/@children.1" label="//@children.3/@sourceConnections.0/@children.2" sourceEnd="//@children.3/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:UseCaseEndEditModel" name="Profesor" location="0,14" id="{UMLID=_tHlMEJiHEeCKx6Cvzo4niw}" attachSource="true" roleLabel="//@children.3/@sourceConnections.0/@children.0/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="+ Profesor" foregroundRGB="96,96,96" location="837,45" size="50,13" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:UseCaseEndEditModel" name="Ver Propuesta" location="150,35" id="{UMLID=_tHnBQJiHEeCKx6Cvzo4niw}" roleLabel="//@children.3/@sourceConnections.0/@children.1/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="+ Ver Propuesta" foregroundRGB="96,96,96" location="478,43" size="78,13" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:WireLabelEditModel" foregroundRGB="96,96,96" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:UseCaseAssociationEditModel" size="2,1" stereotype="" autoLocated="true" id="{UMLID=_z_xL4JiHEeCKx6Cvzo4niw}" source="//@children.3" target="//@children.14" targetEnd="//@children.3/@sourceConnections.1/@children.1" label="//@children.3/@sourceConnections.1/@children.2" sourceEnd="//@children.3/@sourceConnections.1/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:UseCaseEndEditModel" name="Profesor" location="0,74" id="{UMLID=_0LukQJiHEeCKx6Cvzo4niw}" attachSource="true" roleLabel="//@children.3/@sourceConnections.1/@children.0/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="+ Profesor" foregroundRGB="96,96,96" location="825,161" size="50,13" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:UseCaseEndEditModel" name="ver Propuestas Asignadas" location="111,0" id="{UMLID=_0LvyYJiHEeCKx6Cvzo4niw}" roleLabel="//@children.3/@sourceConnections.1/@children.1/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="+ ver Propuestas Asignadas" foregroundRGB="96,96,96" location="541,216" size="133,13" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:WireLabelEditModel" foregroundRGB="96,96,96" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:UseCaseAssociationEditModel" size="2,1" stereotype="" autoLocated="true" id="{UMLID=_73EfUJiHEeCKx6Cvzo4niw}" source="//@children.3" target="//@children.15" targetEnd="//@children.3/@sourceConnections.2/@children.1" label="//@children.3/@sourceConnections.2/@children.2" sourceEnd="//@children.3/@sourceConnections.2/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:UseCaseEndEditModel" name="Profesor" location="4,100" id="{UMLID=_8B8SkJiHEeCKx6Cvzo4niw}" attachSource="true" roleLabel="//@children.3/@sourceConnections.2/@children.0/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="+ Profesor" foregroundRGB="96,96,96" location="825,161" size="50,13" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:UseCaseEndEditModel" name="Cerrar PFC" location="91,0" id="{UMLID=_8B-HwJiHEeCKx6Cvzo4niw}" roleLabel="//@children.3/@sourceConnections.2/@children.1/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="+ Cerrar PFC" foregroundRGB="96,96,96" location="641,307" size="66,13" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:WireLabelEditModel" foregroundRGB="96,96,96" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:UseCaseAssociationEditModel" size="2,1" stereotype="" autoLocated="true" id="{UMLID=_FG5E4JiIEeCKx6Cvzo4niw}" source="//@children.3" target="//@children.16" targetEnd="//@children.3/@sourceConnections.3/@children.1" label="//@children.3/@sourceConnections.3/@children.2" sourceEnd="//@children.3/@sourceConnections.3/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:UseCaseEndEditModel" name="Profesor" location="0,96" id="{UMLID=_FYnuEJiIEeCKx6Cvzo4niw}" attachSource="true" roleLabel="//@children.3/@sourceConnections.3/@children.0/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="+ Profesor" foregroundRGB="96,96,96" location="825,161" size="50,13" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:UseCaseEndEditModel" name="Ver Mensajes" location="150,3" id="{UMLID=_FYpjQJiIEeCKx6Cvzo4niw}" roleLabel="//@children.3/@sourceConnections.3/@children.1/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="+ Ver Mensajes" foregroundRGB="96,96,96" location="527,174" size="74,13" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:WireLabelEditModel" foregroundRGB="96,96,96" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+  </children>
+  <children xsi:type="editmodel:LabelObjectEditModel" location="830,156" size="0,15" fontInfo="Omondo_Font_Default-9-0" description="Stereotype" attachment="//@children.3"/>
+  <children xsi:type="editmodel:LabelObjectEditModel" name="Profesor" location="806,156" size="48,15" fontInfo="Omondo_Font_Default-9-0" description="Name" attachment="//@children.3"/>
+  <children xsi:type="editmodel:UseCaseActorEditModel" name="Administrador" backgroundRGB="253,253,253" location="68,266" size="70,100" id="{UMLID=_v6ktkJiGEeCKx6Cvzo4niw}" itemName="Administrador">
+    <sourceConnections xsi:type="editmodel:UseCaseAssociationEditModel" size="2,1" stereotype="" autoLocated="true" id="{UMLID=_Q1f2gJiHEeCKx6Cvzo4niw}" source="//@children.6" target="//@children.11" targetEnd="//@children.6/@sourceConnections.0/@children.1" label="//@children.6/@sourceConnections.0/@children.2" sourceEnd="//@children.6/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:UseCaseEndEditModel" name="Administrador" location="70,34" id="{UMLID=_Q_4hkJiHEeCKx6Cvzo4niw}" attachSource="true" roleLabel="//@children.6/@sourceConnections.0/@children.0/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="+ Administrador" foregroundRGB="96,96,96" location="145,309" size="75,13" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:UseCaseEndEditModel" name="Asignar Propuesta" location="0,25" id="{UMLID=_Q_6WwJiHEeCKx6Cvzo4niw}" roleLabel="//@children.6/@sourceConnections.0/@children.1/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="+ Asignar Propuesta" foregroundRGB="96,96,96" location="148,280" size="97,13" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:WireLabelEditModel" foregroundRGB="96,96,96" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:UseCaseAssociationEditModel" size="2,1" stereotype="" autoLocated="true" id="{UMLID=_RbYKwJiHEeCKx6Cvzo4niw}" source="//@children.6" target="//@children.12" targetEnd="//@children.6/@sourceConnections.1/@children.1" label="//@children.6/@sourceConnections.1/@children.2" sourceEnd="//@children.6/@sourceConnections.1/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:UseCaseEndEditModel" name="Administrador" location="70,94" id="{UMLID=_RnBaEJiHEeCKx6Cvzo4niw}" attachSource="true" roleLabel="//@children.6/@sourceConnections.1/@children.0/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="+ Administrador" foregroundRGB="96,96,96" location="33,371" size="75,13" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:UseCaseEndEditModel" name="Aceptar Propuesta" location="0,4" id="{UMLID=_RnDPQJiHEeCKx6Cvzo4niw}" roleLabel="//@children.6/@sourceConnections.1/@children.1/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="+ Aceptar Propuesta" foregroundRGB="96,96,96" location="220,381" size="98,13" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:WireLabelEditModel" foregroundRGB="96,96,96" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:UseCaseAssociationEditModel" size="2,1" stereotype="" autoLocated="true" id="{UMLID=_EHHC4JiIEeCKx6Cvzo4niw}" source="//@children.6" target="//@children.16" targetEnd="//@children.6/@sourceConnections.2/@children.1" label="//@children.6/@sourceConnections.2/@children.2" sourceEnd="//@children.6/@sourceConnections.2/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:UseCaseEndEditModel" name="Administrador" location="70,36" id="{UMLID=_ERg8EJiIEeCKx6Cvzo4niw}" attachSource="true" roleLabel="//@children.6/@sourceConnections.2/@children.0/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="+ Administrador" foregroundRGB="96,96,96" location="145,309" size="75,13" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:UseCaseEndEditModel" name="Ver Mensajes" location="14,50" id="{UMLID=_ERixQJiIEeCKx6Cvzo4niw}" roleLabel="//@children.6/@sourceConnections.2/@children.1/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="+ Ver Mensajes" foregroundRGB="96,96,96" location="297,163" size="74,13" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:WireLabelEditModel" foregroundRGB="96,96,96" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+  </children>
+  <children xsi:type="editmodel:LabelObjectEditModel" location="103,366" size="0,15" fontInfo="Omondo_Font_Default-9-0" description="Stereotype" attachment="//@children.6"/>
+  <children xsi:type="editmodel:LabelObjectEditModel" name="Administrador" location="61,366" size="85,15" fontInfo="Omondo_Font_Default-9-0" description="Name" attachment="//@children.6"/>
+  <children xsi:type="editmodel:UseCaseEditModel" name="Nueva Propuesta" backgroundRGB="249,249,255" foregroundRGB="96,96,96" location="555,84" size="150,50" fontInfo="Omondo_Font_Default-8-1" description="" id="{UMLID=_x81gQJiGEeCKx6Cvzo4niw}" itemName="Nueva Propuesta" alternativeFlows="{}" normalFlow="" postCondition="" preCondition="" rank="" trigger="" priority="" scope="" complexity="" application="" extensionPoint="">
+    <sourceConnections xsi:type="editmodel:UseCaseAssociationEditModel" size="2,1" stereotype="" autoLocated="true" id="{UMLID=_9Mrc0JiGEeCKx6Cvzo4niw}" source="//@children.9" target="//@children.3" targetEnd="//@children.9/@sourceConnections.0/@children.1" label="//@children.9/@sourceConnections.0/@children.2" sourceEnd="//@children.9/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:UseCaseEndEditModel" name="Nueva Propuesta" location="150,24" id="{UMLID=_-H_OgJiGEeCKx6Cvzo4niw}" attachSource="true" roleLabel="//@children.9/@sourceConnections.0/@children.0/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="+ Nueva Propuesta" foregroundRGB="96,96,96" location="712,116" size="92,13" fontInfo="Arial-8-0" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:UseCaseEndEditModel" name="Profesor" location="0,52" id="{UMLID=_-IBqwJiGEeCKx6Cvzo4niw}" roleLabel="//@children.9/@sourceConnections.0/@children.1/@children.0" navigable="true" flags="1">
+        <children xsi:type="editmodel:LabelEditModel" name="+ Profesor" foregroundRGB="96,96,96" location="773,88" size="50,13" fontInfo="Arial-8-0" anchorKind="LastPart"/>
+      </children>
+      <children xsi:type="editmodel:WireLabelEditModel" foregroundRGB="96,96,96" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+  </children>
+  <children xsi:type="editmodel:UseCaseEditModel" targetConnections="//@children.0/@sourceConnections.0 //@children.3/@sourceConnections.0" name="Ver Propuesta" backgroundRGB="249,249,255" foregroundRGB="96,96,96" location="322,35" size="150,50" fontInfo="Omondo_Font_Default-8-1" description="" id="{UMLID=_AGuMEJiHEeCKx6Cvzo4niw}" itemName="Ver Propuesta" alternativeFlows="{}" normalFlow="" postCondition="" preCondition="" rank="" trigger="" priority="" scope="" complexity="" application="" extensionPoint=""/>
+  <children xsi:type="editmodel:UseCaseEditModel" targetConnections="//@children.6/@sourceConnections.0" name="Asignar Propuesta" backgroundRGB="249,249,255" foregroundRGB="96,96,96" location="252,275" size="150,50" fontInfo="Omondo_Font_Default-8-1" description="" id="{UMLID=_DNizEJiHEeCKx6Cvzo4niw}" itemName="Asignar Propuesta" alternativeFlows="{}" normalFlow="" postCondition="" preCondition="" rank="" trigger="" priority="" scope="" complexity="" application="" extensionPoint=""/>
+  <children xsi:type="editmodel:UseCaseEditModel" targetConnections="//@children.6/@sourceConnections.1" name="Aceptar Propuesta" backgroundRGB="249,249,255" foregroundRGB="96,96,96" location="322,356" size="150,50" fontInfo="Omondo_Font_Default-8-1" description="" id="{UMLID=_EepOkJiHEeCKx6Cvzo4niw}" itemName="Aceptar Propuesta" alternativeFlows="{}" normalFlow="" postCondition="" preCondition="" rank="" trigger="" priority="" scope="" complexity="" application="" extensionPoint=""/>
+  <children xsi:type="editmodel:UseCaseEditModel" targetConnections="//@children.0/@sourceConnections.1" name="Solicitar PFC" backgroundRGB="249,249,255" foregroundRGB="96,96,96" location="224,98" size="150,50" fontInfo="Omondo_Font_Default-8-1" description="" id="{UMLID=_h2JUEJiHEeCKx6Cvzo4niw}" itemName="Solicitar PFC" alternativeFlows="{}" normalFlow="" postCondition="" preCondition="" rank="" trigger="" priority="" scope="" complexity="" application="" extensionPoint=""/>
+  <children xsi:type="editmodel:UseCaseEditModel" targetConnections="//@children.3/@sourceConnections.1" name="ver PFC" backgroundRGB="249,249,255" foregroundRGB="96,96,96" location="546,226" size="150,50" fontInfo="Omondo_Font_Default-8-1" description="" id="{UMLID=_xB00EJiHEeCKx6Cvzo4niw}" itemName="ver PFC" alternativeFlows="{}" normalFlow="" postCondition="" preCondition="" rank="" trigger="" priority="" scope="" complexity="" application="" extensionPoint=""/>
+  <children xsi:type="editmodel:UseCaseEditModel" targetConnections="//@children.3/@sourceConnections.2" name="Cerrar PFC" backgroundRGB="249,249,255" foregroundRGB="96,96,96" location="602,324" size="150,50" fontInfo="Omondo_Font_Default-8-1" description="" id="{UMLID=_5qMYEJiHEeCKx6Cvzo4niw}" itemName="Cerrar PFC" alternativeFlows="{}" normalFlow="" postCondition="" preCondition="" rank="" trigger="" priority="" scope="" complexity="" application="" extensionPoint=""/>
+  <children xsi:type="editmodel:UseCaseEditModel" targetConnections="//@children.0/@sourceConnections.2 //@children.6/@sourceConnections.2 //@children.3/@sourceConnections.3" name="Ver Mensajes" backgroundRGB="249,249,255" foregroundRGB="96,96,96" location="373,149" size="150,50" fontInfo="Omondo_Font_Default-8-1" description="" id="{UMLID=__SwjEJiHEeCKx6Cvzo4niw}" itemName="Ver Mensajes" alternativeFlows="{}" normalFlow="" postCondition="" preCondition="" rank="" trigger="" priority="" scope="" complexity="" application="" extensionPoint=""/>
+  <diagramOptions xsi:type="options:UseCaseDiagramOptions" level="0" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="14,14" gridOrigin="0,0" rulerUnit="cm" gridShow="true">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+</editmodel:UseCaseDiagramEditModel>

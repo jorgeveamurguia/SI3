@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="persistencia-d" id="{UMLID=_mPO3MJhmEeCKx6Cvzo4niw,JavaID=es.uned.si3.persistencia}" metadata="uml2-1.0" initialized="true" scrolledY="266" tag="10" key="3230303730363239207369335F3732" Shrink="true">
+  <children xsi:type="editmodel:ClassEditModel" name="Administrador" location="41,555" size="130,27" timstampe="4" stereotype="" id="{UMLID=_61DrsJhmEeCKx6Cvzo4niw,JavaID=es.uned.si3.persistencia/Administrador}" shortShow="true" runTimeClassModel="nombre,recibir_notificacion,nombre_usuario,apellidos,email,departamento,ID,equals(Ljava.lang.Object;),dni,password,toString()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.8/@sourceConnections.0" name="Departamento" location="42,401" size="127,27" timstampe="5" stereotype="" id="{UMLID=_58BK4JhmEeCKx6Cvzo4niw,JavaID=es.uned.si3.persistencia/Departamento}" shortShow="true" runTimeClassModel="codigo,departamento,ID">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Mensaje" location="254,581" size="91,27" timstampe="8" stereotype="" id="{UMLID=_6391wJhmEeCKx6Cvzo4niw,JavaID=es.uned.si3.persistencia/Mensaje}" shortShow="true" runTimeClassModel="leido,ID_Solicitud,ID_Profesor,mensajeTipo,ID,ID_Proyecto,mensaje,ID_Alumno,es.uned.si3.persistencia.Mensaje.TipoMensaje">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel">
+      <children xsi:type="editmodel:EnumerationEditModel" name="TipoMensaje" size="136,140" timstampe="8" id="{UMLID=_64cW4JhmEeCKx6Cvzo4niw,JavaID=es.uned.si3.persistencia/Mensaje$TipoMensaje}" runTimeClassModel="peticionSolicitud%,indefinido%,PFCAsignado%,respuestaSolicitud%,disponibleNota%">
+        <children xsi:type="editmodel:CompartmentEditModel" size="115,90">
+          <children xsi:type="editmodel:EnumerationLiteralEditModel" name="respuestaSolicitud" size="115,16" id="{UMLID=_6684UJhmEeCKx6Cvzo4niw}"/>
+          <children xsi:type="editmodel:EnumerationLiteralEditModel" name="disponibleNota" size="99,16" id="{UMLID=_666cEJhmEeCKx6Cvzo4niw}"/>
+          <children xsi:type="editmodel:EnumerationLiteralEditModel" name="indefinido" size="74,16" id="{UMLID=_667DIJhmEeCKx6Cvzo4niw}"/>
+          <children xsi:type="editmodel:EnumerationLiteralEditModel" name="PFCAsignado" size="95,16" id="{UMLID=_668RQJhmEeCKx6Cvzo4niw}"/>
+          <children xsi:type="editmodel:EnumerationLiteralEditModel" name="peticionSolicitud" size="104,16" id="{UMLID=_669fYJhmEeCKx6Cvzo4niw}"/>
+        </children>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true"/>
+      </children>
+    </children>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_640KUZhmEeCKx6Cvzo4niw}" source="//@children.2" target="//@children.4" targetEnd="//@children.2/@sourceConnections.0/@children.2" label="//@children.2/@sourceConnections.0/@children.0" sourceEnd="//@children.2/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="52,26" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="91,10" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,27"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_65BlsZhmEeCKx6Cvzo4niw}" source="//@children.2" target="//@children.3" targetEnd="//@children.2/@sourceConnections.1/@children.2" label="//@children.2/@sourceConnections.1/@children.0" sourceEnd="//@children.2/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="52,26" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="91,13" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,13"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_65PoIZhmEeCKx6Cvzo4niw}" source="//@children.2" target="//@children.8" targetEnd="//@children.2/@sourceConnections.2/@children.2" label="//@children.2/@sourceConnections.2/@children.0" sourceEnd="//@children.2/@sourceConnections.2/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="52,26" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="31,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="61,27"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_65dDgZhmEeCKx6Cvzo4niw}" source="//@children.2" target="//@children.7" targetEnd="//@children.2/@sourceConnections.3/@children.2" label="//@children.2/@sourceConnections.3/@children.0" sourceEnd="//@children.2/@sourceConnections.3/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="52,26" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="81,27" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,10"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.2/@sourceConnections.1 //@children.7/@sourceConnections.1" name="Alumno" location="616,581" size="90,27" timstampe="28" stereotype="" id="{UMLID=_6USg8JhmEeCKx6Cvzo4niw,JavaID=es.uned.si3.persistencia/Alumno}" shortShow="true" runTimeClassModel="nombre,recibir_notificacion,nombre_usuario,ID_CentroAsociado,apellidos,email,ID,ID_Proyecto,dni,password,ID_Propuesta,numero_expediente">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_8H_6QZhmEeCKx6Cvzo4niw}" source="//@children.3" target="//@children.4" targetEnd="//@children.3/@sourceConnections.0/@children.2" label="//@children.3/@sourceConnections.0/@children.0" sourceEnd="//@children.3/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="52,26" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="95,17"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_8IN8sZhmEeCKx6Cvzo4niw}" source="//@children.3" target="//@children.5" targetEnd="//@children.3/@sourceConnections.1/@children.2" label="//@children.3/@sourceConnections.1/@children.0" sourceEnd="//@children.3/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="52,26" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="51,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="37,27"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_8IaxAZhmEeCKx6Cvzo4niw}" source="//@children.3" target="//@children.6" targetEnd="//@children.3/@sourceConnections.2/@children.2" label="//@children.3/@sourceConnections.2/@children.0" sourceEnd="//@children.3/@sourceConnections.2/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="52,26" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="51,27" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="37,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.2/@sourceConnections.0 //@children.3/@sourceConnections.0" name="Proyecto" location="439,427" size="95,27" timstampe="67" stereotype="" id="{UMLID=_6Uc5AJhmEeCKx6Cvzo4niw,JavaID=es.uned.si3.persistencia/Proyecto}" shortShow="true" runTimeClassModel="objetivos,anio,estado_cerrado_desarrollo,ID_Profesor,content_Type_rar_zip,es.uned.si3.persistencia.Proyecto.content_Type_rar_zip,descripcion,Proyecto(Les.uned.si3.persistencia.Propuesta;),es.uned.si3.persistencia.Proyecto.FaseProyecto,titulo,calificacion,tipo,ID,fichero_comprimido,Proyecto(),memoria_pdf,conocimientos_previos">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel">
+      <children xsi:type="editmodel:EnumerationEditModel" name="FaseProyecto" size="124,86" timstampe="67" id="{UMLID=_7YGuYJhmEeCKx6Cvzo4niw,JavaID=es.uned.si3.persistencia/Proyecto$FaseProyecto}" runTimeClassModel="desarrollo%,cerrado%">
+        <children xsi:type="editmodel:CompartmentEditModel" size="76,36">
+          <children xsi:type="editmodel:EnumerationLiteralEditModel" name="cerrado" size="66,16" id="{UMLID=_7b96sJhmEeCKx6Cvzo4niw}"/>
+          <children xsi:type="editmodel:EnumerationLiteralEditModel" name="desarrollo" size="76,16" id="{UMLID=_7b-hwJhmEeCKx6Cvzo4niw}"/>
+        </children>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true"/>
+      </children>
+      <children xsi:type="editmodel:EnumerationEditModel" name="content_Type_rar_zip" size="172,86" timstampe="67" id="{UMLID=_7YHVcZhmEeCKx6Cvzo4niw,JavaID=es.uned.si3.persistencia/Proyecto$content_Type_rar_zip}" runTimeClassModel="zip%,rar%">
+        <children xsi:type="editmodel:CompartmentEditModel" size="43,36">
+          <children xsi:type="editmodel:EnumerationLiteralEditModel" name="zip" size="42,16" id="{UMLID=_7dFVAJhmEeCKx6Cvzo4niw}"/>
+          <children xsi:type="editmodel:EnumerationLiteralEditModel" name="rar" size="43,16" id="{UMLID=_7dF8EJhmEeCKx6Cvzo4niw}"/>
+        </children>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true"/>
+      </children>
+    </children>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_7Yz5AZhmEeCKx6Cvzo4niw}" source="//@children.4" target="//@children.5" targetEnd="//@children.4/@sourceConnections.0/@children.2" label="//@children.4/@sourceConnections.0/@children.0" sourceEnd="//@children.4/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="91,26" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="85,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,17"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_7aGScZhmEeCKx6Cvzo4niw}" source="//@children.4" target="//@children.8" targetEnd="//@children.4/@sourceConnections.1/@children.2" label="//@children.4/@sourceConnections.1/@children.0" sourceEnd="//@children.4/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="52,26" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,10" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="83,27"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.4/@sourceConnections.0 //@children.3/@sourceConnections.1 //@children.7/@sourceConnections.0" name="Propuesta" location="630,364" size="103,27" timstampe="11" stereotype="" id="{UMLID=_6HuEkJhmEeCKx6Cvzo4niw,JavaID=es.uned.si3.persistencia/Propuesta}" shortShow="true" runTimeClassModel="objetivos,anio,titulo,es.uned.si3.persistencia.Propuesta.EnumTipoPropuesta,es.uned.si3.persistencia.Propuesta.EnumEstadoPropuesta,ID_Profesor,ID,descripcion,estado_abierta_cerrada,conocimientos_previos,tipo_general_especifica">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel">
+      <children xsi:type="editmodel:EnumerationEditModel" name="EnumEstadoPropuesta" size="183,86" timstampe="11" id="{UMLID=_6I8zoJhmEeCKx6Cvzo4niw,JavaID=es.uned.si3.persistencia/Propuesta$EnumEstadoPropuesta}" runTimeClassModel="abierta%,cerrada%">
+        <children xsi:type="editmodel:CompartmentEditModel" size="66,36">
+          <children xsi:type="editmodel:EnumerationLiteralEditModel" name="cerrada" size="66,16" id="{UMLID=_6NyQUJhmEeCKx6Cvzo4niw}"/>
+          <children xsi:type="editmodel:EnumerationLiteralEditModel" name="abierta" size="62,16" id="{UMLID=_6NzecJhmEeCKx6Cvzo4niw}"/>
+        </children>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true"/>
+      </children>
+      <children xsi:type="editmodel:EnumerationEditModel" name="EnumTipoPropuesta" size="168,86" timstampe="11" id="{UMLID=_6I9asZhmEeCKx6Cvzo4niw,JavaID=es.uned.si3.persistencia/Propuesta$EnumTipoPropuesta}" runTimeClassModel="especifica%,general%">
+        <children xsi:type="editmodel:CompartmentEditModel" size="75,36">
+          <children xsi:type="editmodel:EnumerationLiteralEditModel" name="general" size="65,16" id="{UMLID=_6O2nUJhmEeCKx6Cvzo4niw}"/>
+          <children xsi:type="editmodel:EnumerationLiteralEditModel" name="especifica" size="75,16" id="{UMLID=_6O2AQJhmEeCKx6Cvzo4niw}"/>
+        </children>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true"/>
+      </children>
+    </children>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_6JbUwZhmEeCKx6Cvzo4niw}" source="//@children.5" target="//@children.8" targetEnd="//@children.5/@sourceConnections.0/@children.2" label="//@children.5/@sourceConnections.0/@children.0" sourceEnd="//@children.5/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="52,26" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,27" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="93,10"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.3/@sourceConnections.2" name="CentroAsociado" location="630,710" size="141,27" timstampe="11" stereotype="" id="{UMLID=_8HZdUJhmEeCKx6Cvzo4niw,JavaID=es.uned.si3.persistencia/CentroAsociado}" shortShow="true" runTimeClassModel="ID,CentroAsociado">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.2/@sourceConnections.3" name="Solicitud" location="439,736" size="96,27" timstampe="10" stereotype="" id="{UMLID=_64Sl4JhmEeCKx6Cvzo4niw,JavaID=es.uned.si3.persistencia/Solicitud}" shortShow="true" runTimeClassModel="anio,pdfConocimientos,ID,es.uned.si3.persistencia.Solicitud.EstadoSolicitud,ID_Alumno,aceptada_rechazada,ID_Propuesta">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel">
+      <children xsi:type="editmodel:EnumerationEditModel" name="EstadoSolicitud" size="139,104" timstampe="10" id="{UMLID=_68V_cJhmEeCKx6Cvzo4niw,JavaID=es.uned.si3.persistencia/Solicitud$EstadoSolicitud}" runTimeClassModel="aceptada%,pendiente%,rechazada%">
+        <children xsi:type="editmodel:CompartmentEditModel" size="79,54">
+          <children xsi:type="editmodel:EnumerationLiteralEditModel" name="rechazada" size="79,16" id="{UMLID=_6-cRMJhmEeCKx6Cvzo4niw}"/>
+          <children xsi:type="editmodel:EnumerationLiteralEditModel" name="pendiente" size="76,16" id="{UMLID=_6-bDEJhmEeCKx6Cvzo4niw}"/>
+          <children xsi:type="editmodel:EnumerationLiteralEditModel" name="aceptada" size="73,16" id="{UMLID=_6-bqIJhmEeCKx6Cvzo4niw}"/>
+        </children>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true"/>
+      </children>
+    </children>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_69At0ZhmEeCKx6Cvzo4niw}" source="//@children.7" target="//@children.5" targetEnd="//@children.7/@sourceConnections.0/@children.2" label="//@children.7/@sourceConnections.0/@children.0" sourceEnd="//@children.7/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="52,26" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="96,10" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,27"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_69RMgZhmEeCKx6Cvzo4niw}" source="//@children.7" target="//@children.3" targetEnd="//@children.7/@sourceConnections.1/@children.2" label="//@children.7/@sourceConnections.1/@children.0" sourceEnd="//@children.7/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" location="579,630" size="52,26" fontInfo="Arial-8-0" automaticRelocationAllowed="false" locationOnWireFromSource="25.0" distanceFromWire="102.99999999999999" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="96,10" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,27"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.5/@sourceConnections.0 //@children.2/@sourceConnections.2 //@children.4/@sourceConnections.1" name="Profesor" location="224,401" size="93,27" timstampe="5" stereotype="" id="{UMLID=_6IzCoJhmEeCKx6Cvzo4niw,JavaID=es.uned.si3.persistencia/Profesor}" shortShow="true" runTimeClassModel="nombre,recibir_notificacion,nombre_usuario,ID_Departamento,apellidos,email,ID,equals(Ljava.lang.Object;),dni,password,toString()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" autoLocated="true" id="{UMLID=_6zrysZhmEeCKx6Cvzo4niw}" source="//@children.8" target="//@children.1" targetEnd="//@children.8/@sourceConnections.0/@children.2" label="//@children.8/@sourceConnections.0/@children.0" sourceEnd="//@children.8/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="91,26" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,13" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="127,13"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" level="4" showScope="InPackage" properties="wireOptions=4"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="14,14" gridOrigin="0,266" rulerUnit="cm" gridShow="true">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" shortPackageNameFormat="true" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showInnerEntity="true"/>
+</editmodel:ClassDiagramEditModel>

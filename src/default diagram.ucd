@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="default diagram" id="{UMLID=_l36jYJhmEeCKx6Cvzo4niw,JavaID=.}" metadata="uml2-1.0" initialized="true" tag="10" key="3230303730363239207369335F3732" Shrink="true">
+  <children xsi:type="editmodel:PackageEditModel" name="es.uned.si3.basededatos" location="50,50" size="117,60" id="{UMLID=_mPLM0ZhmEeCKx6Cvzo4niw,JavaID=es.uned.si3.basededatos}">
+    <packagePreferences xsi:type="editmodel:UMLClassDiagramPackagePreference" shortPackageNameFormat="true"/>
+  </children>
+  <children xsi:type="editmodel:PackageEditModel" name="es.uned.si3.persistencia" location="217,50" size="114,60" id="{UMLID=_mPO3MJhmEeCKx6Cvzo4niw,JavaID=es.uned.si3.persistencia}">
+    <packagePreferences xsi:type="editmodel:UMLClassDiagramPackagePreference" shortPackageNameFormat="true"/>
+  </children>
+  <children xsi:type="editmodel:PackageEditModel" name="es.uned.si3.basededatos.manager" location="544,50" size="93,60" id="{UMLID=_mPR6gJhmEeCKx6Cvzo4niw,JavaID=es.uned.si3.basededatos.manager}">
+    <packagePreferences xsi:type="editmodel:UMLClassDiagramPackagePreference" shortPackageNameFormat="true"/>
+  </children>
+  <children xsi:type="editmodel:PackageEditModel" name="es.uned.si3.web.action" location="687,50" size="80,60" id="{UMLID=_mPUWwJhmEeCKx6Cvzo4niw,JavaID=es.uned.si3.web.action}">
+    <packagePreferences xsi:type="editmodel:UMLClassDiagramPackagePreference" shortPackageNameFormat="true"/>
+  </children>
+  <children xsi:type="editmodel:PackageEditModel" name="es.uned.si3.web.servlet" location="50,160" size="80,60" id="{UMLID=_mPWL8JhmEeCKx6Cvzo4niw,JavaID=es.uned.si3.web.servlet}">
+    <packagePreferences xsi:type="editmodel:UMLClassDiagramPackagePreference" shortPackageNameFormat="true"/>
+  </children>
+  <children xsi:type="editmodel:PackageEditModel" name="es.uned.si3.web.interceptors" location="381,50" size="113,60" id="{UMLID=_mPXaEJhmEeCKx6Cvzo4niw,JavaID=es.uned.si3.web.interceptors}">
+    <packagePreferences xsi:type="editmodel:UMLClassDiagramPackagePreference" shortPackageNameFormat="true"/>
+  </children>
+  <children xsi:type="editmodel:PackageEditModel" name="es.uned.si3.util" location="180,160" size="80,60" id="{UMLID=_mPZPQJhmEeCKx6Cvzo4niw,JavaID=es.uned.si3.util}">
+    <packagePreferences xsi:type="editmodel:UMLClassDiagramPackagePreference" shortPackageNameFormat="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" level="4" properties="wireOptions=4"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="14,14" gridOrigin="0,0" rulerUnit="cm" gridShow="true">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" shortPackageNameFormat="true" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showInnerEntity="true"/>
+</editmodel:ClassDiagramEditModel>

@@ -1,0 +1,597 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice 4.1.7  (Win32)">
+	<META NAME="AUTHOR" CONTENT="CYM">
+	<META NAME="CREATED" CONTENT="20110620;15330000">
+	<META NAME="CHANGEDBY" CONTENT="Carlos Gonz&aacute;lez Mu&ntilde;oz">
+	<META NAME="CHANGED" CONTENT="20110620;22190000">
+	<META NAME="AppVersion" CONTENT="12.0000">
+	<META NAME="DocSecurity" CONTENT="0">
+	<META NAME="HyperlinksChanged" CONTENT="false">
+	<META NAME="LinksUpToDate" CONTENT="false">
+	<META NAME="ScaleCrop" CONTENT="false">
+	<META NAME="ShareDoc" CONTENT="false">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin-left: 3cm; margin-right: 3cm; margin-top: 1.25cm; margin-bottom: 2.5cm }
+		P { margin-bottom: 0.21cm; direction: ltr; color: #000000; widows: 2; orphans: 2 }
+		H1 { margin-top: 0.85cm; margin-bottom: 0cm; direction: ltr; color: #365f91; page-break-inside: avoid; widows: 2; orphans: 2 }
+		H1.western { font-family: "Cambria", serif; font-size: 14pt }
+		H1.cjk { font-family: "SimSun"; font-size: 14pt }
+		H1.ctl { font-family: ; font-size: 14pt }
+		H2 { margin-top: 0.35cm; margin-bottom: 0cm; direction: ltr; color: #4f81bd; page-break-inside: avoid; widows: 2; orphans: 2 }
+		H2.western { font-family: "Cambria", serif; font-size: 13pt }
+		H2.cjk { font-family: "SimSun"; font-size: 13pt }
+		H2.ctl { font-family: ; font-size: 13pt }
+		H4 { margin-top: 0.35cm; margin-bottom: 0cm; direction: ltr; color: #4f81bd; page-break-inside: avoid; widows: 2; orphans: 2 }
+		H4.western { font-family: "Cambria", serif; font-size: 11pt; font-style: italic }
+		H4.cjk { font-family: "SimSun"; font-size: 11pt; font-style: italic }
+		H4.ctl { font-family: ; font-size: 11pt; font-style: italic }
+		H5 { margin-top: 0.35cm; margin-bottom: 0cm; direction: ltr; color: #243f60; page-break-inside: avoid; widows: 2; orphans: 2 }
+		H5.western { font-family: "Cambria", serif; font-size: 11pt; font-weight: normal }
+		H5.cjk { font-family: "SimSun"; font-size: 11pt; font-weight: normal }
+		H5.ctl { font-family: ; font-size: 11pt; font-weight: normal }
+		H6 { margin-top: 0.35cm; margin-bottom: 0cm; direction: ltr; color: #243f60; page-break-inside: avoid; widows: 2; orphans: 2 }
+		H6.western { font-family: "Cambria", serif; font-size: 11pt; font-style: italic; font-weight: normal }
+		H6.cjk { font-family: "SimSun"; font-size: 11pt; font-style: italic; font-weight: normal }
+		H6.ctl { font-family: ; font-size: 11pt; font-style: italic; font-weight: normal }
+		A:link { color: #0000ff; so-language: zxx }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="es-ES" TEXT="#000000" LINK="#0000ff" DIR="LTR">
+<H1 CLASS="western"><SPAN LANG="es-ES">Web frameworks empleados</SPAN></H1>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">A continuaci&oacute;n
+se hace una introducci&oacute;n de los distintos patrones empleados
+para mejorar y facilitar el desarrollo del portal web con java j2ee.</SPAN></P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">El objetivo
+fundamental de un patr&oacute;n  es el de ofrecer funcionalidades
+avanzadas a sus usuarios que permitan inhibirle de gran parte de los
+detalles que implican ciertas operaciones que de otra manera
+requerir&iacute;an gran esfuerzo.</SPAN></P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">Cada petici&oacute;n
+a una p&aacute;gina web de una aplicaci&oacute;n web j2ee implica una
+serie de pasos que muchas veces se escapan a nuestro conocimiento.
+Esta pr&aacute;ctica ha supuesto un excelente caso de uso para
+profundizar en su comportamiento y poder aprovechar mejor las
+posibilidades que ofrece.</SPAN></P>
+<H4 CLASS="western"><SPAN LANG="es-ES">Declaraci&oacute;n de
+frameworks empleados</SPAN></H4>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">El fichero
+web.xml  presente en la carpeta WEB-INF de todas las aplicaciones web
+j2ee contiene una declaraci&oacute;n de las actividades que deber&aacute;n
+llevarse a cabo sobre cada petici&oacute;n. Por ejemplo, si
+analizamos el fichero web.xml presente en la presente pr&aacute;ctica,
+encontramos lo siguiente:</SPAN></P>
+<P STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+&hellip;<FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="en-US">&lt;filter&gt;
+</SPAN></FONT></FONT>
+</P>
+<P STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="en-US">&lt;filter-name&gt;sitemesh&lt;/filter-name&gt;
+</SPAN></FONT></FONT>
+</P>
+<P STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="en-US">&lt;filter-class&gt;com.opensymphony.sitemesh.webapp.SiteMeshFilter&lt;/filter-class&gt;
+</SPAN></FONT></FONT>
+</P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2>&lt;/filter&gt; </FONT></FONT>
+</P>
+<P STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="en-US">&lt;filter-mapping&gt;
+</SPAN></FONT></FONT>
+</P>
+<P STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="en-US">&lt;filter-name&gt;sitemesh&lt;/filter-name&gt;
+</SPAN></FONT></FONT>
+</P>
+<P STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="en-US">&lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+</SPAN></FONT></FONT>
+</P>
+<P STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="en-US">&lt;/filter-mapping&gt;</SPAN></FONT></FONT></P>
+<P STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+&hellip;</P>
+<P STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<BR>
+</P>
+<P STYLE="margin-bottom: 0.35cm">Esta declaraci&oacute;n xml est&aacute;
+declarando un filtro que se va a aplicar a todas las peticiones que
+se hagan a esta p&aacute;gina (&lt;url-pattern&gt;) y dicho filtro es
+ejecutado por la clase 
+<FONT FACE="Courier New, serif"><FONT SIZE=2>com.opensymphony.sitemesh.webapp.SiteMeshFilter.</FONT></FONT></P>
+<H5 CLASS="western">Framework Sitemesh</H5>
+<P STYLE="margin-bottom: 0.35cm">La clase la clase 
+<FONT FACE="Courier New, serif"><FONT SIZE=2>com.opensymphony.sitemesh.webapp.SiteMeshFilter</FONT></FONT>
+es el punto de entrada a este framework de construcci&oacute;n de
+p&aacute;ginas web para compartir elementos comunes a todas ellas. En
+vocabulario de aplicaciones ASP.NET sitemesh permite la definici&oacute;n
+de p&aacute;ginas padre. En nuestra aplicaci&oacute;n, se ha empleado
+dicha funcionalidad para dotar a todas las p&aacute;ginas del sitio
+web del mismo interfaz gr&aacute;fico, posicionamiento de controles
+est&aacute;ndar lo cual mejora la usabilidad de la aplicaci&oacute;n
+al reducir el n&uacute;mero de pantallas diferentes durante el empleo
+de la aplicaci&oacute;n.</P>
+<P STYLE="margin-bottom: 0.35cm">Por otro lado simplifica la creaci&oacute;n
+de p&aacute;ginas ya que exceptuando la p&aacute;gina &ldquo;padre&rdquo;
+empleada como patr&oacute;n para construir el resto de p&aacute;ginas,
+el resto se reduce a declarar los elementos que realmente son
+diferentes.</P>
+<P STYLE="margin-bottom: 0.35cm"><BR><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><SPAN LANG="es-ES">Cuando un </SPAN>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H5 CLASS="western"><SPAN LANG="es-ES">Framework Struts2</SPAN></H5>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">El framework
+Struts2 es una herramienta de soporte para el desarrollo de
+aplicaciones Web bajo el patr&oacute;n MVC bajo la plataforma Java EE
+(Java Enterprise Edition). De acuerdo con el patr&oacute;n MVC
+(Modelo, Vista, Controlador), </SPAN>el procesamiento se separa en
+tres secciones diferenciadas llamadas el modelo, las vistas y el
+controlador de manera que se desacopla el desarrollo de las
+aplicaciones haci&eacute;ndose m&aacute;s sencillo sustituir unas
+partes por otras sin afectar la funcionalidad de la aplicaci&oacute;n.</P>
+<P STYLE="margin-bottom: 0.35cm">Entre las m&uacute;ltiples
+caracter&iacute;sticas que ofrece esta librer&iacute;a, en el
+presente proyecto se han empleado las siguientes:</P>
+<H6 CLASS="western"><SPAN LANG="es-ES">Interceptors</SPAN></H6>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">Los interceptors
+se encargan de interceptar el flujo de ejecuci&oacute;n de las
+peticiones y realizar distintas tareas. En el contexto del presente
+proyecto, se han desarrollado dos interceptores en el paquete
+es.uned.si3.web.interceptors para chequear que el usuario ten&iacute;a
+la autorizaci&oacute;n para ejecutar cierto c&oacute;digo.</SPAN></P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">Se declaran
+dentro del fichero de configuraci&oacute;n de struts (struts.xml) :</SPAN></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf">&hellip;</P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="es-ES">	&lt;interceptors&gt;</SPAN></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="es-ES">		&lt;interceptor
+name=&quot;authenticationInterceptor&quot;</SPAN></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="es-ES">class=&quot;es.uned.si3.web.interceptors.AuthenticationInterceptor&quot;
+/&gt;</SPAN></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="es-ES">		&lt;interceptor
+name=&quot;rolesInterceptor&quot;</SPAN></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="es-ES">class=&quot;es.uned.si3.web.interceptors.RolesInterceptor&quot;
+/&gt;</SPAN></FONT></FONT></P>
+<P STYLE="margin-bottom: 0cm; background: #bfbfbf"><BR>
+</P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="es-ES">		</SPAN>&lt;interceptor-stack
+name=&quot;defaultSecurityStackWithAuthentication&quot;&gt;</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2><B>		&lt;interceptor-ref
+name=&quot;defaultStack&quot; /&gt;</B></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2><B>		&lt;interceptor-ref
+name=&quot;authenticationInterceptor&quot;&gt;</B></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf">&hellip;</P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2>		&lt;/interceptor-ref&gt;</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><BR>
+</P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2><B>		&lt;interceptor-ref
+name=&quot;rolesInterceptor&quot;&gt;</B></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf">&hellip;</P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="es-ES">		&lt;/interceptor-ref&gt;</SPAN></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="es-ES">	&lt;/interceptor-stack&gt;</SPAN></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2>&lt;/interceptors&gt;</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><BR>
+</P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2>&lt;default-interceptor-ref
+name=&quot;defaultSecurityStackWithAuthentication&quot; /&gt;</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><SPAN LANG="es-ES">En esta declaraci&oacute;n,
+se observa que definimos nuestros interceptors junto con la clase que
+los implementa, y despu&eacute;s (&lt;interceptor-stack) creamos una
+pila de interceptores constituido por un conjunto por defecto junto
+con nuestros interceptores. </SPAN>
+</P>
+<P STYLE="margin-bottom: 0cm"><SPAN LANG="es-ES">Esta herramienta es
+muy potente, porque podemos seleccionar aquellos interceptores que
+queremos que se ejecuten. Por ejemplo, entre aquellos que vienen en
+la pila por defecto, tenemos los que se encargan de validar el
+contenido de las p&aacute;ginas antes de pasarlo al servidor, de
+subir ficheros desde el cliente al servidor, etc.</SPAN></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H6 CLASS="western"><SPAN LANG="es-ES">Acciones</SPAN></H6>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">En el vocabulario
+Struts2, cuando un cliente solicita ejecutar algo a una aplicaci&oacute;n
+web, le est&aacute; pidiendo que realice una acci&oacute;n. Struts
+ofrece una sintaxis muy rica para describir el c&oacute;mo debe
+llevarse a cabo dicha ejecuci&oacute;n. Se define en el fichero de
+configuraci&oacute;n de struts (struts.xml) y por ejemplo,
+encontramos:</SPAN></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2>&lt;action
+name=&quot;PropuestaPFC.*&quot;
+class=&quot;es.uned.si3.web.action.PropuestaPFCController&quot;</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2>	method=&quot;{1}&quot;&gt;</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2>	&lt;interceptor-ref
+name=&quot;defaultSecurityStackWithAuthentication&quot;/&gt;</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2>	&lt;interceptor-ref
+name=&quot;fileUpload&quot;&gt;</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2>		&lt;param
+name=&quot;maximumSize&quot;&gt;536870912&lt;/param&gt; &lt;!-- 512
+MB --&gt;</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2>		&lt;param
+name=&quot;allowedTypes&quot;&gt;application/pdf&lt;/param&gt;</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2>	<SPAN LANG="es-ES">&lt;/interceptor-ref&gt;</SPAN></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="es-ES">	</SPAN>&lt;result
+name=&quot;input&quot;&gt;/index.jsp&lt;/result&gt;</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2>	&lt;result
+name=&quot;crear&quot;&gt;/private/editPropuestaPFC.jsp&lt;/result&gt;</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2>	&lt;result
+name=&quot;listaPropuestas&quot;&gt;/private/propuestasPFC.jsp&lt;/result&gt;</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2>	&lt;result
+name=&quot;solicitar&quot;&gt;/private/solicitarPFC.jsp&lt;/result&gt;</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2>	&lt;result
+name=&quot;start&quot;&gt;/index.jsp&lt;/result&gt;</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2>	&lt;result
+name=&quot;error&quot;&gt;/index.jsp&lt;/result&gt;</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="es-ES">&lt;/action&gt;</SPAN></FONT></FONT></P>
+<P STYLE="margin-bottom: 0.35cm"><BR><BR>
+</P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">Es en las p&aacute;ginas
+web (jsp) en las que se declaran las acciones que han de ejecutarse
+en el servidor. Por ejemplo, nos podemos encontrar con:</SPAN></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="es-ES">	</SPAN>&lt;s:form
+action=&quot;PropuestaPFC.solicitar&quot; method=&quot;post&quot;</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2>		<SPAN LANG="es-ES">enctype=&quot;multipart/form-data&quot;&gt;</SPAN></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="es-ES">		&lt;s:file
+name=&quot;upload&quot; label=&quot;Fichero de conocimientos&quot;</SPAN></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="es-ES">			accept=&quot;application/pdf&quot;&gt;&lt;/s:file&gt;</SPAN></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm; background: #bfbfbf"><FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="es-ES">		</SPAN>&lt;s:submit
+align=&quot;left&quot; value='Solicitar' /&gt;</FONT></FONT></P>
+<P STYLE="margin-bottom: 0.35cm"><BR><BR>
+</P>
+<P STYLE="margin-bottom: 0.35cm">Donde el resultado de pulsar el
+bot&oacute;n submit es el de invocar a la acci&oacute;n
+<B>PropuestaPFC.solicitar.</B></P>
+<P STYLE="margin-bottom: 0.35cm">Esta acci&oacute;n es capturada por
+struts que encuentra en el fichero de configuraci&oacute;n que dicha
+acci&oacute;n ha de ser procesada por la clase
+<SPAN LANG="es-ES">es.uned.si3.web.action.PropuestaPFCController y
+por el m&eacute;todo &quot;{1}&quot;. En este caso struts sigue la
+sintaxis que indica que el * se interpreta como cualquier cosa y se
+referencia como {1}, {2},&hellip; As&iacute; se invocar&aacute; al
+m&eacute;todo </SPAN><SPAN LANG="es-ES"><B>solicitar de la clase
+PropuestaPFCController.</B></SPAN><SPAN LANG="es-ES"> Esta clase
+lleva a cabo la tarea de Controlador y en este proyecto de Modelo.</SPAN></P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">Este m&eacute;todo
+se encarga de dar valor a los atributos que servir&aacute;n a la
+p&aacute;gina jsp (que lleva a cabo la tarea de Vista) para dar
+contenido a la p&aacute;gina e interpretar los valores devueltos por
+el cliente para ejecutar las acciones adecuadas en el servidor.</SPAN></P>
+<H6 CLASS="western"><SPAN LANG="es-ES">Empleo de etiquetas Struts2</SPAN></H6>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">tanto de
+	control, como de UI:</SPAN></P>
+	<UL>
+		<LI><P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES"><B>Tags de
+		control: </B></SPAN><SPAN LANG="es-ES">Controlan el flujo de
+		ejecuci&oacute;n de las p&aacute;ginas en que son declaradas. Por
+		ejemplo:</SPAN></P>
+	</UL>
+</UL>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2><FONT COLOR="#008080"><B>&lt;</B></FONT><B><SPAN STYLE="background: #c0c0c0">s:if</SPAN></B><FONT COLOR="#000000"><B>
+</B></FONT><FONT COLOR="#7f007f"><B>test</B></FONT><FONT COLOR="#000000"><B>=</B></FONT><FONT COLOR="#2a00ff"><B>&quot;%{#userName
+!= null}&quot;</B></FONT><FONT COLOR="#008080"><B>&gt;</B></FONT></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2><FONT COLOR="#000000">	</FONT><FONT COLOR="#008080"><SPAN LANG="es-ES">&lt;</SPAN></FONT><SPAN LANG="es-ES">table
+</SPAN><FONT COLOR="#7f007f"><SPAN LANG="es-ES">class</SPAN></FONT><FONT COLOR="#000000"><SPAN LANG="es-ES">=</SPAN></FONT><FONT COLOR="#2a00ff"><SPAN LANG="es-ES">&quot;loginTable&quot;</SPAN></FONT><FONT COLOR="#008080"><SPAN LANG="es-ES">&gt;</SPAN></FONT></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2><FONT COLOR="#000000"><SPAN LANG="es-ES">		</SPAN></FONT><FONT COLOR="#008080"><SPAN LANG="es-ES">&lt;</SPAN></FONT><SPAN LANG="es-ES">s:label</SPAN><FONT COLOR="#000000"><SPAN LANG="es-ES">
+</SPAN></FONT><FONT COLOR="#7f007f"><SPAN LANG="es-ES">value</SPAN></FONT><FONT COLOR="#000000"><SPAN LANG="es-ES">=</SPAN></FONT><FONT COLOR="#2a00ff"><SPAN LANG="es-ES">&quot;Bienvenido
+%{#userName}&quot;</SPAN></FONT><FONT COLOR="#000000"><SPAN LANG="es-ES">
+</SPAN></FONT><FONT COLOR="#008080"><SPAN LANG="es-ES">/&gt;</SPAN></FONT></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2><FONT COLOR="#000000"><SPAN LANG="es-ES">	</SPAN></FONT><FONT COLOR="#008080"><SPAN LANG="es-ES">&lt;/</SPAN></FONT><SPAN LANG="es-ES">table</SPAN><FONT COLOR="#008080"><SPAN LANG="es-ES">&gt;</SPAN></FONT></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2><B>&lt;/s:if&gt;</B></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2><B>&lt;s:else&gt;</B></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2>	&lt;span
+class=&quot;fuentepeq1&quot;&gt; &lt;s:url id=&quot;urlRegister&quot;</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2>			action=&quot;UserAction.newUser&quot;
+/&gt; &lt;s:a href=&quot;%{urlRegister}&quot;</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2>			<SPAN LANG="es-ES">title=&quot;Nuevo
+usuario&quot;&gt;Nuevo usuario&lt;/s:a&gt; </SPAN></FONT></FONT>
+</P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="es-ES">	&lt;/span&gt;</SPAN></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="es-ES"><B>&lt;/s:else&gt;</B></SPAN></FONT></FONT></P>
+<P STYLE="margin-bottom: 0.35cm"><BR><BR>
+</P>
+<UL>
+	<UL>
+		<LI><P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES"><B>Tags de
+		UI:</B></SPAN><SPAN LANG="es-ES"> Pinta elementos visuales en la
+		pantalla de forma sencilla e intuitiva. Por ejemplo:</SPAN></P>
+	</UL>
+</UL>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2><FONT COLOR="#008080">&lt;</FONT><FONT COLOR="#3f7f7f">s:select</FONT>
+<FONT COLOR="#7f007f">name</FONT><FONT COLOR="#000000">=</FONT><I>'centro_asociado'</I>
+<FONT COLOR="#7f007f">label</FONT><FONT COLOR="#000000">=</FONT><I>'Centro
+asociado'</I> <FONT COLOR="#7f007f">headerKey</FONT><FONT COLOR="#000000">=</FONT><I>&quot;&quot;
+</I><FONT COLOR="#7f007f">required</FONT><FONT COLOR="#000000">=</FONT><I>'true'</I>
+<FONT COLOR="#7f007f">headerValue</FONT><FONT COLOR="#000000">=</FONT><I>&quot;--Selecciona--&quot;
+</I><FONT COLOR="#7f007f">list</FONT><FONT COLOR="#000000">=</FONT><I>&quot;listaCentrosAsociados&quot;</I>
+<FONT COLOR="#008080">/&gt;</FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0.35cm"><BR><BR>
+</P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">Esta simple
+etiquete, genera en tiempo de ejecuci&oacute;n el siguiente c&oacute;digo
+html en base al contenido del atributo listaCentrosAsociados:</SPAN></P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2>&lt;select
+name=&quot;centro_asociado&quot;
+id=&quot;UserAction_newUser_centro_asociado&quot;&gt; </FONT></FONT>
+</P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+    <FONT FACE="Courier New, serif"><FONT SIZE=2>&lt;option
+value=&quot;&quot;&gt;--Selecciona--&lt;/option&gt; </FONT></FONT>
+</P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+    <FONT FACE="Courier New, serif"><FONT SIZE=2>&lt;option
+value=&quot;CALATAYUD&quot;&gt;CALATAYUD&lt;/option&gt; </FONT></FONT>
+</P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+    <FONT FACE="Courier New, serif"><FONT SIZE=2>&lt;option
+value=&quot;BARBASTRO&quot;&gt;BARBASTRO&lt;/option&gt; </FONT></FONT>
+</P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+    <FONT FACE="Courier New, serif"><FONT SIZE=2>&lt;option
+value=&quot;Almeria&quot;&gt;Almeria&lt;/option&gt; </FONT></FONT>
+</P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+    <FONT FACE="Courier New, serif"><FONT SIZE=2>&lt;option
+value=&quot;Almeria-EL EJIDO&quot;&gt;Almeria-EL EJIDO&lt;/option&gt;
+</FONT></FONT>
+</P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+    <FONT FACE="Courier New, serif"><FONT SIZE=2>&lt;option
+value=&quot;BAZA&quot;&gt;BAZA&lt;/option&gt;</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2>&lt;/select&gt;</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H6 CLASS="western"><SPAN LANG="es-ES"><B>Validaci&oacute;n</B></SPAN></H6>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">Entre los
+interceptores explicados anteriormente, hay unos encargados de
+validar que el valor de los campos de los formularios es correcto.
+Estos interceptores, esperan un fichero con el nombre del
+Controlador, pero con la terminaci&oacute;n
+NombreControlador-validation.xml.</SPAN></P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="es-ES">	</SPAN>&lt;field
+name=&quot;dni&quot;&gt;</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+ <FONT FACE="Courier New, serif"><FONT SIZE=2>	&lt;field-validator
+type=&quot;regex&quot;&gt;</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2>			&lt;param
+name=&quot;expression&quot;&gt;</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2>				[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][a-zA-Z]</FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2>			<SPAN LANG="es-ES">&lt;/param&gt;</SPAN></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="es-ES">			&lt;message&gt;Sintaxis
+de ejemplo del DNI:999999999V&lt;/message&gt;</SPAN></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="es-ES">		&lt;/field-validator&gt;</SPAN></FONT></FONT></P>
+<P LANG="en-US" STYLE="margin-left: 1.25cm; margin-bottom: 0cm; background: #bfbfbf">
+<FONT FACE="Courier New, serif"><FONT SIZE=2><SPAN LANG="es-ES">	&lt;/field&gt;</SPAN></FONT></FONT></P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">Aqu&iacute; se
+muestra la sintaxis para ejecutar una validaci&oacute;n sobre un DNI
+(8 d&iacute;gitos terminados en una letra)</SPAN></P>
+<P STYLE="margin-bottom: 0cm"><SPAN LANG="es-ES"><B>NOTA:
+</B></SPAN><SPAN LANG="es-ES">Lamentablemente, el 1 de Junio de 2011,
+a mitad de la realizaci&oacute;n de la pr&aacute;ctica, nos
+encontramos con la desagradable sorpresa de que ninguno de nuestros
+ficheros xml de validaci&oacute;n funcionaban ya que la DTD que
+comprobaba la validez sint&aacute;ctica de dichos ficheros hab&iacute;a
+sido eliminada del site oficial. En su lugar, en vez de la TDT, hab&iacute;a
+una nota explicando la discontinuaci&oacute;n del proyecto.</SPAN></P>
+<P STYLE="margin-bottom: 0cm"><SPAN LANG="es-ES">Afortunadamente, en
+los foros &ndash;que no en la p&aacute;gina oficial- encontramos un
+repositorio m&aacute;s o menos estable de DTDs ( siendo el
+<A HREF="http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd</A>
+el empleado en esta pr&aacute;ctica en vez del ex</SPAN>oficial
+&quot;http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd&quot;
+<SPAN LANG="es-ES">).</SPAN></P>
+<H2 CLASS="western"><SPAN LANG="es-ES">Usabilidad</SPAN></H2>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">Una p&aacute;gina
+web supone una experiencia nueva para un usuario. El hecho de reducir
+la curva de aprendizaje de las nuevas tecnolog&iacute;as es
+fundamental para el &eacute;xito de cualquier negocio.</SPAN></P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">En este caso, se
+han seguido varios patrones de usabilidad para facilitar la vida a
+los usuarios.</SPAN></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">Interface
+	com&uacute;n en todas las p&aacute;ginas de la aplicaci&oacute;n
+	gracias al uso del framework sitemesh.</SPAN></P>
+</UL>
+<P STYLE="margin-left: 0.64cm; margin-bottom: 0.35cm"><IMG SRC="Web%20framework%20empleados_html_m2fce0c4c.png" ALIGN=BOTTOM WIDTH=435 HEIGHT=258 BORDER=0></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">Empleo de
+	hoja de estilos que permitir&iacute;a modificar la presentaci&oacute;n
+	de la aplicaci&oacute;n f&aacute;cilmente</SPAN></P>
+	<LI><P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">Dise&ntilde;o
+	de la p&aacute;gina de manera que no dependa al 100% de la hoja de
+	estilos y pueda ser usada en entornos que no la acepten:</SPAN></P>
+</UL>
+<P STYLE="margin-bottom: 0cm; page-break-after: avoid"><IMG SRC="Web%20framework%20empleados_html_68a8ba46.png" ALIGN=BOTTOM WIDTH=285 HEIGHT=179 BORDER=0><IMG SRC="Web%20framework%20empleados_html_67937cd3.png" ALIGN=BOTTOM WIDTH=273 HEIGHT=173 BORDER=0></P>
+<P STYLE="margin-left: 1.25cm; text-indent: 1.25cm; margin-bottom: 0cm">
+<SPAN LANG="es-ES">Con hoja de estilo				Sin hoja de estilo</SPAN></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm"><SPAN LANG="es-ES">Reducci&oacute;n
+	en la medida de lo posible de la introducci&oacute;n de informaci&oacute;n
+	por parte del usuario. Por ejemplo, para filtrar los a&ntilde;os de
+	los PFC, se le presenta un dropbox con solo aquellos a&ntilde;os en
+	los que haya PFCs.</SPAN></P>
+	<LI><P STYLE="margin-bottom: 0cm"><SPAN LANG="es-ES">Presentaci&oacute;n
+	de los mensajes importantes en colores llamativos:</SPAN></P>
+</UL>
+<P ALIGN=CENTER STYLE="margin-left: 0.63cm; margin-bottom: 0cm; page-break-after: avoid">
+<IMG SRC="Web%20framework%20empleados_html_m4789620a.png" ALIGN=BOTTOM WIDTH=370 HEIGHT=79 BORDER=0></P>
+<P ALIGN=CENTER STYLE="margin-left: 0.64cm; margin-bottom: 0cm"><SPAN LANG="es-ES">Este
+ejemplo indica al usuario que el DNI est&aacute; mal introducido</SPAN></P>
+<H1 CLASS="western"><SPAN LANG="es-ES">Gu&iacute;a de usuario</SPAN></H1>
+<P STYLE="margin-bottom: 0.35cm"><IMG SRC="Web%20framework%20empleados_html_6c0cb5b9.png" ALIGN=BOTTOM WIDTH=567 HEIGHT=373 BORDER=0></P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">La pantalla de
+bienvenida de la aplicaci&oacute;n, explica de forma clara el
+objetivo del portal y la necesidad de registrarse para poder hacer
+uso de &eacute;l.</SPAN></P>
+<H2 CLASS="western"><SPAN LANG="es-ES">Nuevo usuario</SPAN></H2>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">Aparte del
+usuario administrador, puede haber usuarios profesores y alumnos.</SPAN></P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">La misma
+plantilla se sigue en ambos casos, exceptuando que los profesores
+pertenecen a un departamento y los usuarios a un centro. Como se ve,
+todo es igual excepto ese campo desplegable.</SPAN></P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">1&ordm; se pide
+que tipo de usuario se vaya a crear:</SPAN></P>
+<P STYLE="margin-bottom: 0.35cm"><IMG SRC="Web%20framework%20empleados_html_m72d2528c.png" ALIGN=BOTTOM WIDTH=262 HEIGHT=71 BORDER=0></P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">2&ordm; Se
+completan los dem&aacute;s datos del usuario:</SPAN></P>
+<P STYLE="margin-bottom: 0cm; page-break-after: avoid"><IMG SRC="Web%20framework%20empleados_html_m49629623.png" ALIGN=BOTTOM WIDTH=235 HEIGHT=166 BORDER=0>
+<IMG SRC="Web%20framework%20empleados_html_6eca8910.png" ALIGN=BOTTOM WIDTH=266 HEIGHT=167 BORDER=0></P>
+<P STYLE="margin-bottom: 0cm"><SPAN LANG="es-ES">	Nuevo
+Alumno					Nuevo Profesor</SPAN></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><SPAN LANG="es-ES">En general. Todas
+las acciones finalizan con un mensaje, bien de error, bien de
+confirmaci&oacute;n:</SPAN></P>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="Web%20framework%20empleados_html_m2f54ff4c.png" ALIGN=BOTTOM WIDTH=461 HEIGHT=157 BORDER=0></P>
+<H2 CLASS="western"><SPAN LANG="es-ES">Edici&oacute;n de usuario</SPAN></H2>
+<P STYLE="margin-bottom: 0.35cm; page-break-after: avoid"><SPAN LANG="es-ES">Una
+vez el usuario registrado, puede cambiar detalles de su perfil</SPAN></P>
+<P STYLE="margin-bottom: 0.35cm"><IMG SRC="Web%20framework%20empleados_html_5cd977b1.png" ALIGN=BOTTOM WIDTH=479 HEIGHT=321 BORDER=0></P>
+<H2 CLASS="western"><SPAN LANG="es-ES">Funcionalidades del profesor</SPAN></H2>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">Las opciones a su
+disposici&oacute;n son:</SPAN></P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES"><B>Ver propuestas
+de PFC:</B></SPAN><SPAN LANG="es-ES"> Lista las propuestas realizadas
+por el profesor</SPAN></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm; page-break-after: avoid"><IMG SRC="Web%20framework%20empleados_html_m57dcea76.png" ALIGN=BOTTOM WIDTH=404 HEIGHT=222 BORDER=0></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm"><SPAN LANG="es-ES">Esta
+opci&oacute;n permite filtrar por a&ntilde;o</SPAN></P>
+<P STYLE="margin-bottom: 0cm; page-break-after: avoid"><SPAN LANG="es-ES"><B>Crear
+propuesta de PFC</B></SPAN><SPAN LANG="es-ES">: Crear una propuesta
+de proyecto.</SPAN></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm; page-break-after: avoid"><IMG SRC="Web%20framework%20empleados_html_2cd38b3b.png" ALIGN=BOTTOM WIDTH=342 HEIGHT=228 BORDER=0></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm"><SPAN LANG="es-ES">El tipo
+de propuesta puede ser general o espec&iacute;fica.</SPAN></P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES"><B>Ver PFC
+asignados</B></SPAN><SPAN LANG="es-ES">: Desde aqu&iacute; ver&aacute;
+los PFC que se le han asignado, y podr&aacute; cerrarlos, asignando
+nota y adjuntando la memoria del mismo.</SPAN></P>
+<P STYLE="margin-bottom: 0.35cm"><IMG SRC="Web%20framework%20empleados_html_27aeef6d.png" ALIGN=BOTTOM WIDTH=567 HEIGHT=112 BORDER=0></P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">Pueden filtrarse
+por estado y por a&ntilde;o. A la derecha, hay un link que muestra
+los detalles del proyecto y desde donde se puede cerrar.</SPAN></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm; page-break-after: avoid"><IMG SRC="Web%20framework%20empleados_html_64df4ca3.png" ALIGN=BOTTOM WIDTH=515 HEIGHT=321 BORDER=0></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm"><SPAN LANG="es-ES">Esta
+pantalla explica lo que se necesita para cerrar el proyecto</SPAN></P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">Despu&eacute;s de
+completar el proceso, el proyecto aparece cerrado y con dos links a
+su memoria, como el archivo comprimido con el c&oacute;digo:</SPAN></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.35cm"><IMG SRC="Web%20framework%20empleados_html_m7e82c2bd.png" ALIGN=BOTTOM WIDTH=427 HEIGHT=242 BORDER=0></P>
+<P STYLE="margin-bottom: 0cm"><SPAN LANG="es-ES"><B>Ver Mensajes</B></SPAN><SPAN LANG="es-ES">:
+Muestra los mensajes enviados al usuario.</SPAN></P>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="Web%20framework%20empleados_html_626caa75.png" ALIGN=BOTTOM WIDTH=567 HEIGHT=73 BORDER=0></P>
+<H2 CLASS="western"><SPAN LANG="es-ES">Funcionalidades del alumno</SPAN></H2>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">Las opciones a su
+disposici&oacute;n son:</SPAN></P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES"><B>Ver propuestas
+de PFC:</B></SPAN><SPAN LANG="es-ES"> Ver listado de propuestas
+disponibles</SPAN></P>
+<P STYLE="margin-bottom: 0.35cm"><IMG SRC="Web%20framework%20empleados_html_7ae2c60a.png" ALIGN=BOTTOM WIDTH=468 HEIGHT=108 BORDER=0></P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES"><B>Solicitar PFC:
+</B></SPAN><SPAN LANG="es-ES">Permite enviar una solicitud de PFC
+sobre una propuesta. Pero solo una, ya que si tiene alguna pendiente
+o bien proyecto asignado, esta pantalla le presentar&aacute; un
+mensaje de error: </SPAN>
+<IMG SRC="Web%20framework%20empleados_html_6dcdfba4.png" ALIGN=BOTTOM WIDTH=430 HEIGHT=19 BORDER=0><SPAN LANG="es-ES">.</SPAN></P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">En cambio si el
+alumno no ha realizado propuesta, o esta ha sido rechazada se le
+presentan las propuestas abiertas y se le pide un fichero pdf de
+conocimientos.</SPAN></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.35cm"><IMG SRC="Web%20framework%20empleados_html_m447cbfbd.png" ALIGN=BOTTOM WIDTH=361 HEIGHT=189 BORDER=0></P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">Una vez
+solicitado, deber&aacute; esperar que el administrador se lo confirme
+o rechace.</SPAN></P>
+<P STYLE="margin-bottom: 0.35cm; page-break-after: avoid"><SPAN LANG="es-ES"><B>Ver
+Mensajes</B></SPAN><SPAN LANG="es-ES">: Muestra los mensajes enviados
+al usuario.</SPAN></P>
+<P STYLE="margin-bottom: 0.35cm"><IMG SRC="Web%20framework%20empleados_html_m25d2d32d.png" ALIGN=BOTTOM WIDTH=567 HEIGHT=91 BORDER=0></P>
+<H2 CLASS="western"><SPAN LANG="es-ES">Funcionalidades del
+administrador</SPAN></H2>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">Las opciones a su
+disposici&oacute;n son:</SPAN></P>
+<P STYLE="margin-bottom: 0.35cm; page-break-after: avoid"><SPAN LANG="es-ES"><B>Ver
+propuestas de PFC:</B></SPAN><SPAN LANG="es-ES"> Ver el listado de
+todas las propuestas realizadas, filtradas por a&ntilde;o acad&eacute;mico.</SPAN></P>
+<P STYLE="margin-bottom: 0.35cm"><IMG SRC="Web%20framework%20empleados_html_m666b9e73.png" ALIGN=BOTTOM WIDTH=515 HEIGHT=183 BORDER=0></P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES"><B>Ver
+solicitudes de PFC:</B></SPAN><SPAN LANG="es-ES"> Ver el listado de
+todas las solicitudes realizadas, filtradas por a&ntilde;o acad&eacute;mico.
+</SPAN>
+</P>
+<P STYLE="margin-bottom: 0.35cm"><IMG SRC="Web%20framework%20empleados_html_750f4934.png" ALIGN=BOTTOM WIDTH=397 HEIGHT=183 BORDER=0></P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">En la columna de
+la derecha, se puede observar un link al fichero pdf de conocimientos
+que subi&oacute; el alumno al hacer la propuesta. Pulsar dicho link
+descarga el archivo en tu m&aacute;quina.</SPAN></P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">Una vez
+seleccionada la solicitud que se quiere revisar, se pulsa el bot&oacute;n
+&ldquo;revisar propuesta seleccionada&rdquo;:</SPAN></P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0.35cm"><IMG SRC="Web%20framework%20empleados_html_m3e9ca7e4.png" ALIGN=BOTTOM WIDTH=567 HEIGHT=164 BORDER=0></P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES">Esta pantalla
+permite aceptar o rechazar la solicitud, pero si se acepta, hay que
+especificar el profesor que se har&aacute; cargo de llevar el
+proyecto. Este ejemplo, al tratarse de una propuesta &ldquo;espec&iacute;fica&rdquo;
+solo puede tener al profesor que la cre&oacute; como el encargado de
+la misma.</SPAN></P>
+<P STYLE="margin-bottom: 0.35cm; page-break-after: avoid"><SPAN LANG="es-ES">Asimismo,
+al aceptar esta propuesta, se rechazar&aacute;n autom&aacute;ticamente
+el resto de solicitudes a la misma propuesta ya que esta es
+espec&iacute;fica y por tanto solo asignable a un &uacute;nico alumno
+como se puede ver en la siguiente imagen:</SPAN></P>
+<P STYLE="margin-bottom: 0.35cm"><IMG SRC="Web%20framework%20empleados_html_m3e6391fa.png" ALIGN=BOTTOM WIDTH=446 HEIGHT=140 BORDER=0></P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES"><B>Ver PFC:</B></SPAN><SPAN LANG="es-ES">
+Este men&uacute; le permite ver el listado de todos los PFC en
+desarrollo, filtrados por a&ntilde;o acad&eacute;mico. Asimismo, esta
+opci&oacute;n le permite ver el listado de todos los PFC terminados,
+filtrados por a&ntilde;o acad&eacute;mico.</SPAN></P>
+<P STYLE="margin-bottom: 0.35cm"><IMG SRC="Web%20framework%20empleados_html_m2e873971.png" ALIGN=BOTTOM WIDTH=567 HEIGHT=107 BORDER=0></P>
+<P STYLE="margin-bottom: 0.35cm"><BR><BR>
+</P>
+<P STYLE="margin-bottom: 0.35cm"><SPAN LANG="es-ES"><B>Ver Mensajes:</B></SPAN><SPAN LANG="es-ES">
+Muestra los mensajes enviados al usuario.</SPAN></P>
+<P STYLE="margin-bottom: 0.35cm"><IMG SRC="Web%20framework%20empleados_html_m2b503d73.png" ALIGN=BOTTOM WIDTH=567 HEIGHT=127 BORDER=0></P>
+</BODY>
+</HTML>

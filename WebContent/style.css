@@ -1,0 +1,421 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background: #b20000 url('images/background.png') repeat-x;
+	color: #fff;
+	font-family: arial, sans-serif;
+	font-size: 12px;
+	text-align: center;
+}
+
+input {
+	padding: 3px 5px;
+	font-family: arial, sans-serif;
+	font-size: 14px;
+}
+
+label {
+	font-family: arial, sans-serif;
+	font-size: 14px;
+}
+
+tr.odd td {
+	background-color: #CC9999;
+	color: black;
+	font-size: 7;
+}
+
+tr.even td {
+	background-color: #9999CC;
+	color: black;
+	font-size: 7;
+}
+
+th {
+	text-align: left;
+	padding: 1em 1.5em 0.1em 0.5em;
+	color: white;
+	background-color: blue;
+	border-right: 2px solid blue;
+}
+
+a {
+	color: #fff;
+	background-color: inherit;
+	font-weight: bold;
+}
+
+a:hover {
+	color: #f4a308;
+	background-color: inherit;
+}
+
+/*
+span {
+	#display: none;
+	line-height:20px;
+}
+*/
+img {
+	border: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+p {
+	padding: 10px 0px 11px;
+	text-align: justify;
+	line-height: 16px;
+}
+
+.fuentepeq1 {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 5px 0px;
+}
+
+.fuentepeq1 a {
+	color: #f4a308;
+	font-family: Tahoma;
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.clearthis {
+	margin: 0px;
+	height: 1px;
+	clear: both;
+	float: none;
+	font-size: 1px;
+	line-height: 0px;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+#body_wrapper {
+	margin: 0px auto;
+	width: 788px;
+	background: url('./images/header_bg3.gif') no-repeat 0% 0%;
+}
+
+/* Page Header */
+#page_header {
+	margin: 1px auto;
+	width: 716px;
+	height: 50px; /*56*/
+	overflow: hidden;
+	text-align: left;
+}
+
+#company_name {
+	width: 466px;
+	float: left;
+	padding-top: 8px;
+}
+
+#company_name h1 {
+	height: 35px; /*56*/
+	font-size: 1.5em;
+	color: #F4A308;
+}
+
+/* Header Navigation */
+#header_nav {
+	width: 716px;
+	height: 50x; /*56*/
+	overflow: hidden;
+	float: left;
+	padding-left: 25px;
+	text-align: justify;
+}
+
+#header_nav ul {
+	
+}
+
+#header_nav li {
+	background: url(images/menu_bullet.gif) no-repeat 0px .7em;
+	height: 23px;
+	float: left;
+	padding-left: 1px;
+	padding-right: 10px;
+}
+
+#header_nav li a {
+	display: block;
+	padding: 5px 5px 0px 10px;
+	text-decoration: none;
+}
+
+#header_nav li a:hover {
+	color: #ffe400;
+	background-color: inherit;
+}
+
+/* Login area*/
+#loginArea_1 {
+	background: url('images/login_top.gif') no-repeat 0px 0%;
+	width: 250px;
+	height: 80px;
+	margin-top: 4px;
+	padding-left: 0px;
+	float: left;
+	text-align: left;
+}
+
+#loginArea_2 {
+	padding: 5px 0px 2px;
+	background: url('images/login_bot.gif') no-repeat 0% 100%;
+}
+
+#loginArea {
+	padding: 0px 10px 20px;
+	color: #F4A308;
+	background: #60160a url('images/login_bg.gif') repeat-y;
+	font-family: verdana, arial, sans-serif;
+	font-size: 9px;
+	text-align: left;
+}
+
+#loginArea li {
+	color: #white;
+	padding: 5px 0px 2px;
+	font-size: inherit;
+	background-color: inherit;
+	float: left;
+}
+
+#loginArea li a {
+	color: #F4A308;
+	font-size: inherit;
+	background-color: inherit;
+}
+
+#loginArea li a:HOVER {
+	color: yellow;
+	font-size: inherit;
+	background-color: inherit;
+}
+
+#loginForm_content {
+	font-size: 8;
+	color: #f4a308;
+	font-weight: bold;
+}
+
+#loginForm_content a {
+	color: #f4a308;
+	background-color: inherit;
+	text-decoration: none;
+}
+
+#loginForm_content a:hover {
+	color: #fff;
+	background-color: inherit;
+}
+
+#loginForm_content li {
+	padding: 0px 0px;
+}
+
+/* Left Sidebar */
+#leftsidebar_1 {
+	margin-top: 4px;
+	padding-left: 36px;
+	background: url('images/sidebar_top.png') no-repeat 36px 0%;
+	float: left;
+	text-align: left;
+}
+
+#leftsidebar_2 {
+	padding: 11px 0px;
+	width: 154px;
+	background: url('images/sidebar_bot.png') no-repeat 0% 100%;
+}
+
+#leftsidebar_content {
+	color: #f4a308;
+	background: #60160a url('images/sidebar_bg.gif') repeat-y;
+	font-weight: bold;
+}
+
+#leftsidebar_content a {
+	color: #f4a308;
+	background-color: inherit;
+	text-decoration: none;
+}
+
+#leftsidebar_content a:hover {
+	color: #fff;
+	background-color: inherit;
+}
+
+#leftsidebar_content li {
+	padding: 4px 0px;
+}
+
+/* Main Content */
+#maincontent_1 {
+	margin-top: 128px;
+	margin-left: 20px;
+	padding-right: 20px;
+	background: url('images/main_top.gif') no-repeat 0% 0%;
+	float: left;
+	text-align: left;
+}
+
+#maincontent_2 {
+	padding: 12px 0px;
+	width: 716px;
+	float: left;
+	background: url('images/main_bot.gif') no-repeat 0% 100%;
+}
+
+#maincontent_content {
+	padding: 17px 20px;
+	color: #4b3001;
+	background: #c9953b url('images/main_bg.gif') repeat-y 0% 0%;
+	font-family: verdana, arial, sans-serif;
+	font-size: 12px;
+}
+
+#maincontent_content a {
+	color: #4b3001;
+	background-color: inherit;
+}
+
+#maincontent_content a:hover {
+	color: #724c04;
+	background-color: inherit;
+}
+
+span.errorMessage  {
+	color: #840102;
+	font-size: 1em;
+	font-weight: bold;
+	float: left;
+	padding-left: 20px;
+}
+
+.actionError ul {
+	border-bottom: dotted;
+}
+
+.actionError li {
+	list-style: circle inside;
+	color: #840102;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+.actionError li spam {
+	float: left;
+	padding-left: 1px;
+	padding-right: 10px;
+}
+
+.actionMessage ul {
+	border-bottom: dotted;
+	padding: 0px;
+}
+
+.actionMessage li {
+	list-style: circle inside;
+	color: blue;
+	font-size: 1.2em;
+	padding: 0px;
+}
+
+#maincontent_content li a:hover {
+	color: #ffe400;
+	background-color: inherit;
+}
+
+#listaOpciones ul {
+	background: none;
+}
+
+#listaOpciones li {
+	list-style: circle inside;
+	padding: 9px;
+	font-size: 1.2em;
+	background: inherit;
+}
+
+#listaOpciones li a {
+	display: block;
+}
+
+#customTable {
+	width: 690px;
+}
+
+table.wwFormTable {
+	width: 350px;
+}
+
+table.wwFormTable td {
+	text-align: left;
+}
+
+tr.even td {
+	
+}
+
+/* Page Footer */
+#page_footer {
+	margin: 0px auto;
+	padding: 15px 0px 25px;
+	width: 690px;
+	text-align: left;
+}
+
+#ringoffire {
+	width: 250px;
+	height: 100px;
+	float: left;
+}
+
+#ringoffire .box {
+	padding-top: 12px;
+	line-height: 22px;
+}
+
+#paypalverified {
+	padding-left: 35px;
+	float: left;
+}
+
+#paypalverified a {
+	display: block;
+	width: 86px;
+	height: 70px;
+}
+
+#copyright_info {
+	margin-right: 150px;
+	width: 270px;
+	float: right;
+	line-height: 20px;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 10px;
+}
+
+#copyright_info small b {
+	padding-top: 1px;
+	display: block;
+	float: left;
+	font-size: 15px;
+}
